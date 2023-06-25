@@ -9,18 +9,16 @@ const NavBar = () => {
   return (
     <header className="transp fixed z-50 w-full">
       <nav className="z-10 mx-auto flex max-w-screen-2xl items-center justify-between p-5">
-        <div className="flex w-1/3 items-center gap-2">
-          <Link href="/">
-            <Image
-              src="/images/white-up.png"
-              alt="Logo"
-              width={50}
-              height={50}
-              className="rounded-full"
-            />
-          </Link>
+        <Link href="/" className="flex w-1/3 items-center gap-2">
+          <Image
+            src="/images/white-up.png"
+            alt="Logo"
+            width={50}
+            height={50}
+            className="rounded-full"
+          />
           <span className="text-lg font-bold">Computerizer</span>
-        </div>
+        </Link>
         {width && (
           <>
             <ul className="flex w-1/3 items-center justify-center gap-5">
