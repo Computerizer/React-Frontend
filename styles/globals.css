@@ -65,6 +65,18 @@
     border: 2px solid #df6472;
     outline: none;
   }
+
+  .card {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 
 @layer utilities {

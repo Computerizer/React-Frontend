@@ -3,7 +3,7 @@ import Slider1 from "./Slider1";
 
 const Hero = () => {
   return (
-    <section className="min-h-h2 container mx-auto flex lg:pt-5 ">
+    <section className="min-h-h2 container mx-auto flex pt-20 lg:pt-5">
       <div className="flex w-full flex-col justify-center gap-10 pl-3 lg:w-1/2  lg:pr-10 ">
         <h1 className="text-7xl font-bold">
           Welcome to your go to{" "}

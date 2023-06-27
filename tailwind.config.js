@@ -19,6 +19,7 @@ module.exports = {
         primeDark: "#02030e",
         textDark: "#dfe3fb",
         textNormal: "#040f15",
+        bgDark2: "#191B23",
       },
     },
   },
