@@ -1,17 +1,17 @@
 import Image from "next/image";
-import i1 from "../public/images/dsc06992_final-100840399-orig.jpg";
+import i1 from "@public/images/img4.avif";
 
 const Slider1 = () => {
   return (
-    <div className="relative h-full w-full">
+    <div className="h-full w-full">
       <Image
         src={i1}
         alt="Logo"
         style={{
           width: "100%",
-          height: "100%",
+          height: "auto",
         }}
-        className="absolute"
+        className=""
       />
     </div>
   );

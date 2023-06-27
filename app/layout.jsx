@@ -1,5 +1,5 @@
 import "@styles/globals.css";
-import NavBar from "@components/NavBar";
+import NavBar from "@components/navbar/NavBar";
 
 export const metadata = {
   title: "Computerizer",
@@ -11,7 +11,7 @@ const RootLayout = ({ children }) => {
     <html lang="en">
       <body>
         <NavBar />
-        <main className="pt-20">{children}</main>
+        <main className="lg:pt-20">{children}</main>
       </body>
     </html>
   );

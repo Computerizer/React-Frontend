@@ -8,12 +8,6 @@
   font-family: "Inter", sans-serif;
 }
 
-body {
-  /* background-color: bisque; */
-  /* display: flex;
-  justify-content: center; */
-}
-
 .from-compt-gred {
   --tw-gradient-from: #fe8540 var(--tw-gradient-from-position);
   --tw-gradient-to: #df6472 var(--tw-gradient-to-position);
@@ -28,11 +22,16 @@ body {
 
 .transp {
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+}
+
+.transp2 {
+  background-color: rgba(254, 133, 62, 0.2);
+  backdrop-filter: blur(20px);
 }
 
 .prime-color {
-  color: #fe8540; /*prime 1*/
+  color: #fe853e; /*prime 1*/
   color: #df6472; /*prime 2*/
   color: #02030e; /*dark backgroun*/
   color: #dfe3fb; /*text for dark*/
@@ -49,11 +48,22 @@ body {
 
   .btn-prime {
     background-color: #fe8540;
-    color: #dfe3fb;
+    color: white;
   }
 
   .btn-second {
     border: 1px solid #df6472;
+  }
+
+  .input-second {
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #df6472;
+  }
+
+  .input-second:focus-visible {
+    border: 2px solid #df6472;
+    outline: none;
   }
 }
 
