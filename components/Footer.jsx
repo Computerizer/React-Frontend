@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="container mx-auto mt-10 flex flex-col gap-8 p-5">
+    <footer className=" mt-10 flex flex-col gap-8 p-5">
       <p className="text-2xl font-semibold">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime vero at
         sunt, eaque consequatur labore iste possimus laboriosam repellendus

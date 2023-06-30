@@ -4,11 +4,11 @@ import PartsGrid from "@components/PartsGrid";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Features />
       <PartsGrid />
-    </div>
+    </>
   );
 };
 

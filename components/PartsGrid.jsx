@@ -12,7 +12,7 @@ const PartsGrid = () => {
   const photoWidth = "80%";
 
   return (
-    <section className="container mx-auto p-5 pt-20">
+    <section className="p-5 pt-20">
       <h1 className="mb-10 text-center text-5xl font-bold">
         Deals of the Week
       </h1>
