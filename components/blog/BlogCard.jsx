@@ -4,7 +4,7 @@ import i1 from "@public/images/img1.jpg";
 
 const BlogCard = () => {
   return (
-    <Link href="/blog/posts" className="w-fit border lg:m-0">
+    <Link href="/blog/posts" className="w-fit basis-full border lg:m-0">
       <Image src={i1} alt="Logo" className="w-full rounded-t-xl" />
       <div className="flex flex-col gap-8 p-3 lg:justify-between">
         <div>
