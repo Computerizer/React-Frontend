@@ -1,10 +1,58 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
 const Menus = () => {
+  const menusTitles = ["home", "tool", "blog", "about"];
+  const path = usePathname();
+  const [menusItems, setMenusItems] = useState([]);
+  useEffect(() => {
+    setMenusItems(
+      menusTitles.map((title) => {
+        if (title === "home") {
+          if (path === "/") {
+            return (
+              <li key={title}>
+                <Link href="/" className="actvie capitalize">
+                  {title}
+                </Link>
+              </li>
+            );
+          } else {
+            return (
+              <li key={title}>
+                <Link href="/" className="capitalize">
+                  {title}
+                </Link>
+              </li>
+            );
+          }
+        } else {
+          if (path.slice(1) === title) {
+            return (
+              <li key={title}>
+                <Link href={`/${title}`} className="actvie capitalize">
+                  {title}
+                </Link>
+              </li>
+            );
+          } else {
+            return (
+              <li key={title}>
+                <Link href={`/${title}`} className="capitalize">
+                  {title}
+                </Link>
+              </li>
+            );
+          }
+        }
+      })
+    );
+  }, [path]);
+
   // menu icon
   const isMobile = window.innerWidth < 1024 ? true : false;
   const [menu, setMenu] = useState(!isMobile);
@@ -61,20 +109,7 @@ const Menus = () => {
         style={style}
       >
         <ul className="lg:flex lg:w-1/2 lg:justify-center lg:gap-3">
-          <li>
-            <Link href="/" className="actvie">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/tool">Tool</Link>
-          </li>
-          <li>
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
+          {menusItems}
         </ul>
         <div className="lg:flex-end flex gap-3 lg:ml-auto ">
           {search ? (
@@ -122,7 +157,12 @@ const Menus = () => {
               Search
             </button>
           )}
-          <button className="btn-base-styl btn-prime">Sign In</button>
+          <button
+            className="btn-base-styl btn-prime disable"
+            title="Coming soon!"
+          >
+            Sign In
+          </button>
         </div>
       </div>
     </>

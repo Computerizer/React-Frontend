@@ -2,7 +2,7 @@ import BlogCard from "./BlogCard";
 
 const Recents = () => {
   return (
-    <div className="flex gap-1 overflow-scroll ">
+    <div className="flex gap-2 overflow-scroll ">
       <BlogCard />
       <BlogCard />
       <BlogCard />

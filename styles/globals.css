@@ -43,7 +43,7 @@
   .btn-base-styl {
     padding: 0.5rem 1.5rem;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
   }
 
   .btn-prime {
@@ -83,6 +83,16 @@
   .actvie {
     color: #fe8540;
     font-weight: 700;
+  }
+
+  .active-btn {
+    background-color: #fe8540;
+    color: white;
+  }
+
+  .disable {
+    cursor: default;
+    opacity: 0.8;
   }
 
   .min-h-h2 {
