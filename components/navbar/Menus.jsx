@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -54,10 +54,12 @@ const Menus = () => {
   }, [path]);
 
   // menu icon
-  const isMobile = window.innerWidth < 1024 ? true : false;
-  const [menu, setMenu] = useState(!isMobile);
+  const menuRef = useRef();
+  const isMobile = menuRef.current.clientWidth < 984 ? true : false;
+  const [menu, setMenu] = useState(false);
+
   const style = {
-    display: isMobile ? (!menu ? "none" : "flex") : "flex",
+    display: isMobile ? (menu ? "flex" : "none") : "flex",
   };
   function openMenu() {
     setMenu((prev) => !prev);
@@ -106,6 +108,7 @@ const Menus = () => {
       </button>
       <div
         className="mt-3 w-full flex-col items-center justify-center gap-3 text-center lg:mt-0 lg:w-2/3 lg:flex-row lg:justify-between"
+        ref={menuRef}
         style={style}
       >
         <ul className="lg:flex lg:w-1/2 lg:justify-center lg:gap-3">
