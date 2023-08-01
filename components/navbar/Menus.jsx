@@ -157,11 +157,8 @@ const Menus = () => {
               Search
             </button>
           )}
-          <button
-            className="btn-base-styl btn-prime disable"
-            title="Coming soon!"
-          >
-            Sign In
+          <button className="btn-base-styl btn-prime" title="Coming soon!">
+            <Link href="/">Sign Up</Link>
           </button>
         </div>
       </div>

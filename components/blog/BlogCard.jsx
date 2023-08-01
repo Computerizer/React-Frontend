@@ -6,9 +6,9 @@ const BlogCard = () => {
   return (
     <div className="w-fit shrink-0 rounded-lg border md:max-w-sm lg:m-0 lg:max-w-sm">
       <Image src={i1} alt="Logo" className="w-full rounded-t-xl" />
-      <div className="flex flex-col gap-8 p-3 lg:justify-between">
+      <div className="flex flex-col gap-8 p-5 lg:justify-between">
         <div>
-          <h3 className="ml-2 text-prime2">/ review</h3>
+          <h3 className=" text-prime2">/ review</h3>
           <Link
             href="/blog/How to creat your first PC?"
             className="line-clamp-3 text-3xl font-semibold"

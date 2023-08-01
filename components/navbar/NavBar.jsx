@@ -12,9 +12,11 @@ const NavBar = () => {
             alt="Logo"
             width={50}
             height={50}
-            className="rounded-full"
+            className="rounded-xl"
           />
-          <span className="text-lg font-bold">Computerizer</span>
+          <span className="from-compt-gred bg-gradient-to-r bg-clip-text text-lg font-bold text-transparent">
+            Computerizer
+          </span>
         </Link>
 
         <Menus />

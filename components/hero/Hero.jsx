@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="min-h-h2 flex">
       <div className="flex w-full flex-col justify-center gap-10 pl-3 lg:w-1/2  lg:pr-10 ">
-        <h1 className="text-7xl font-bold">
+        <h1 className="leading-40 text-7xl font-bold">
           Welcome to your go to{" "}
           <span className="from-compt-gred bg-gradient-to-r bg-clip-text text-transparent">
             PC website!
