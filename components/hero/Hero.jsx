@@ -17,7 +17,11 @@ const Hero = () => {
           id architecto?
         </p>
         <div className="flex w-full gap-3 ">
-          <button className="btn-base-styl btn-prime">Build a PC</button>
+          <button className="btn-base-styl btn-prime">
+            <Link href="/tool" className=" capitalize">
+              Start Building
+            </Link>
+          </button>
           <button className="btn-base-styl btn-second">Read more</button>
         </div>
       </div>

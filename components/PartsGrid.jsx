@@ -13,9 +13,10 @@ const PartsGrid = () => {
 
   return (
     <section className="p-5 pt-20">
-      <h1 className="mb-10 text-center text-5xl font-bold">
-        Deals of the Week
+      <h1 className="mb-5 text-center text-5xl font-bold">
+        Best deals are <span className="trans-text">Here</span>.
       </h1>
+      <p className="mb-10 text-center text-lg font-bold">Deals of the Week</p>
       <div className="lg:grid-row-3 grid gap-5 lg:auto-rows-min lg:grid-cols-3">
         <Link href="/" className="card text-center lg:row-span-2" id="cpu">
           <Image

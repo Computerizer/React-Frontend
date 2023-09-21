@@ -98,4 +98,10 @@
   .min-h-h2 {
     min-height: 80vh;
   }
+
+  .trans-text {
+    background-image: linear-gradient(to right, #fe853e, #df6472);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
 }

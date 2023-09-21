@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import i1 from "@public/images/img4.avif";
 import React from "react";
 import Step1 from "@components/tool/Step1";
 import Step2 from "@components/tool/Step2";
@@ -54,32 +56,52 @@ const page = () => {
       </h1>
       <div className="mb-10 mt-20 flex items-center justify-between px-10 text-xl font-bold lg:justify-center lg:gap-20">
         <dvi
-          className="rounded-full p-4"
+          className="flex h-14 w-14 items-center justify-center rounded-full p-4 "
           style={{ backgroundColor: `${step1color}` }}
         >
           1
         </dvi>
         <dvi
-          className="rounded-full p-4"
+          className="flex h-14 w-14 items-center justify-center rounded-full p-4"
           style={{ backgroundColor: `${step2color}` }}
         >
           2
         </dvi>
         <dvi
-          className="rounded-full p-4"
+          className="flex h-14 w-14 items-center justify-center rounded-full p-4"
           style={{ backgroundColor: `${step3color}` }}
         >
           3
         </dvi>
       </div>
-      <form action="/" className="rounded-xl bg-textDark p-5">
-        {steps === 1 && <Step1 data={data} change={changeValue} />}
-        {steps === 2 && <Step2 data={data} change={changeValue} />}
-        {steps === 3 && <Step3 data={data} change={changeValue} />}
-        {steps === 4 && <Result data={data} />}
+      <div className=" flex  gap-10">
+        {steps === 4 && (
+          <Image
+            src={i1}
+            alt="Logo"
+            style={{
+              width: "60%",
+              height: "auto",
+            }}
+            className="hidden lg:block"
+          />
+        )}
+        <form
+          action="/"
+          className="w-full rounded-xl border-2 border-textDark p-5"
+        >
+          {steps === 1 && <Step1 data={data} change={changeValue} />}
+          {steps === 2 && <Step2 data={data} change={changeValue} />}
+          {steps === 3 && <Step3 data={data} change={changeValue} />}
+          {steps === 4 && <Result data={data} />}
 
-        {steps !== 4 && <button onClick={nextStep}>Next</button>}
-      </form>
+          {steps !== 4 && (
+            <button onClick={nextStep} className="btn-base-styl btn-prime mt-5">
+              Next
+            </button>
+          )}
+        </form>
+      </div>
     </div>
   );
 };

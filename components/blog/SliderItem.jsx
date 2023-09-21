@@ -1,27 +1,32 @@
-import Link from "next/link";
-import Image from "next/image";
 import i1 from "@public/images/img1.jpg";
+import Image from "next/image";
+import Link from "next/link";
 
-const BlogCard = () => {
+const SliderItem = ({ data }) => {
   return (
-    <div className="w-fit shrink-0 justify-self-stretch rounded-lg border lg:m-0 lg:max-w-sm lg:justify-self-center">
-      <Image src={i1} alt="Logo" className="w-full rounded-t-xl" />
-      <div className="flex flex-col gap-8 p-4 lg:justify-between">
+    <div className="mb-8 mt-5 w-full shrink-0 overflow-hidden rounded-xl border lg:m-0 lg:mb-3 lg:flex lg:h-[60vh]">
+      <Image src={i1} alt="Logo" className="lg:w-7/12" />
+      <div className="justify-bitween flex flex-col p-3 lg:w-5/12 lg:pb-4 lg:pt-6">
         <div>
-          <h3 className=" text-prime2">/ review</h3>
+          <h3 className="text-prime2">/ review</h3>
           <Link
             href="/blog/How to creat your first PC?"
-            className="line-clamp-3 text-2xl font-medium"
+            className="line-clamp-3 text-3xl font-semibold lg:text-4xl"
           >
-            Lorem ipsum dolor sit amet adipisicing elit. Rerum, dolor.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </Link>
         </div>
-        <div className="flex items-end justify-between">
+        <p className="line-clamp-3 lg:line-clamp-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias autem,
+          facilis consequuntur sequi fuga beatae, veritatis sunt, excepturi amet
+          voluptatum debitis. Perspiciatis, accusamus voluptates. Ipsum?
+        </p>
+        <div className="flex items-end justify-between lg:mt-auto">
           <div className="flex items-center gap-2">
             <Image src={i1} alt="Logo" className="h-10 w-10 rounded-full" />
             <div>
-              <p className="font-semibold">Author Name</p>
-              <p>30 june 2023 / 12:45</p>
+              <p className="font-semibold">{data.name}</p>
+              <p>30 june 2023 / 1</p>
             </div>
           </div>
           <button className="end-0 flex items-center gap-2 rounded-lg bg-gray-200 p-2">
@@ -47,4 +52,4 @@ const BlogCard = () => {
   );
 };
 
-export default BlogCard;
+export default SliderItem;

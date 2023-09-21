@@ -3,8 +3,8 @@
 const step1 = ({ data, change, show }) => {
   return (
     <section className="lg:flex lg:justify-between">
-      <label htmlFor="budget" className="text-lg font-bold">
-        budget: {data.budget}
+      <label htmlFor="budget" className="text-xl font-bold lg:text-3xl">
+        Budget: {data.budget}
       </label>
       <input
         type="range"

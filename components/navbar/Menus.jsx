@@ -54,10 +54,9 @@ const Menus = () => {
   }, [path]);
 
   // menu icon
-  const isMobile = window.innerWidth < 1024 ? true : false;
-  const [menu, setMenu] = useState(!isMobile);
+  const [menu, setMenu] = useState(false);
   const style = {
-    display: isMobile ? (!menu ? "none" : "flex") : "flex",
+    display: menu ? "flex" : "none",
   };
   function openMenu() {
     setMenu((prev) => !prev);
@@ -105,7 +104,7 @@ const Menus = () => {
         )}
       </button>
       <div
-        className="mt-3 w-full flex-col items-center justify-center gap-3 text-center lg:mt-0 lg:w-2/3 lg:flex-row lg:justify-between"
+        className="mt-3 hidden w-full flex-col items-center justify-center gap-3 text-center lg:mt-0 lg:!flex lg:w-2/3 lg:flex-row lg:justify-between"
         style={style}
       >
         <ul className="lg:flex lg:w-1/2 lg:justify-center lg:gap-3">
