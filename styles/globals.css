@@ -41,29 +41,23 @@
 
 @layer components {
   .btn-base-styl {
-    padding: 0.5rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
+    @apply rounded-lg border-none px-6 py-2;
   }
 
   .btn-prime {
-    background-color: #fe8540;
-    color: white;
+    @apply bg-prime1 text-white;
   }
 
   .btn-second {
-    border: 1px solid #df6472;
+    @apply border-2 border-solid border-prime2;
   }
 
   .input-second {
-    padding: 0.5rem 1.5rem;
-    border-radius: 1rem;
-    border: 1px solid #df6472;
+    @apply rounded-2xl border-2 border-solid border-prime2 px-6 py-2;
   }
 
   .input-second:focus-visible {
-    border: 2px solid #df6472;
-    outline: none;
+    @apply border-2 border-solid border-prime2 outline-none;
   }
 
   .card {

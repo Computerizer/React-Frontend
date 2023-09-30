@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 
 const Menus = () => {
   const menusTitles = ["home", "tool", "blog", "about"];
